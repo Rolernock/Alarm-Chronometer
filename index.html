@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <title>Alarm Count Down</title>
+</head>
+<body>
+      <div class="circles">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+        <div class="circle5"></div>
+    </div>
+    <section class="container">
+        <div class="glass">
+            <h2 class="ml">TIME: <span class="time"></span></h2>
+            <input  type="datetime-local" name="alarmTime" class="value">
+            <div class="controls">
+                <button class="button set-alarm">Set Alarm</button>
+                <button class="button stop-alarm">Stop Alarm</button>
+            </div>
+            <h2>TIMER: <span class="count-down"> 00 : 00 : 00</span></h2>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>

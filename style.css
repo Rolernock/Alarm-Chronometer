@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right top, #65dfc9, #9cdbeb);
+}
+.glass {
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    width: 70%;
+    text-align: center;
+    border-radius: 24px;
+    height: 70%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 4.5;
+    z-index: 8;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 7px rgb(43, 37, 37);
+}
+.button {
+    padding:8px 15px;
+    margin:1rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+    border: none;
+    transition: .4s ease-in;
+}
+.button:hover {
+    transform: scale(1.1);
+    font-size: 17px;
+}
+input {
+    padding:10px 12px;
+    border-radius: 3rem;
+    border: none;
+    text-align: center;
+    width: 50%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.ml {
+    margin-left: -26vw;
+}
+h2 {
+    width: 100%;
+    margin-left: -25vw;
+}
+circles {
+    position:relative;
+    z-index: -2;
+}
+.circle2 {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background: rgb(0, 0, 139,0.8);
+    top: 18vh;
+    left: 25%;
+    border-radius: 50%;
+    animation: circle-1 8s linear infinite;
+}
+.circle4 {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    background: rgb(250, 235, 215, 0.5);
+    top: 50vh;
+    left: 80%;
+    border-radius: 50%;
+}
+.circle5 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: rgb(250, 235, 215, 0.5);
+    top: 50vh;
+    left: 50vw;
+    border-radius: 50%;
+    animation: jump 20s linear infinite;
+}
+@keyframes circle-1 {
+    0%,100% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1);
+    }
+    
+}
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(-50px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+}
+@media (max-width: 554px) {
+    h2, .ml {
+        margin-left: 0;
+    }
+
+}
+@media (max-width: 500px) {
+    input {
+        font-size: 10px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+}
